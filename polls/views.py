@@ -21,7 +21,7 @@ def detail(request, question_id):
     context = {
         'question': question,
     }
-    return render(request, 'polls/details.html', context)
+    return render(request, 'polls/detail.html', context)
 
 
 def results(request, question_id):
