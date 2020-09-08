@@ -11,7 +11,7 @@
 
 {% endif %}
 
-<form action="{% url 'polls:vote' question.id%}">
+<form action="{% url 'polls:vote' question.id %}" method="POST">
     {% csrf_token %}
     {% for choice in question.choice_set.all %}
 
