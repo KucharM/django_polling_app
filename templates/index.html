@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-body">
+        <h1>Welcome to Polling App!!</h1>
+        <a href="{% url 'polls:home' %}">View Polls</a>
+    </div>
+</div>
+
+{% endblock %}
