@@ -3,12 +3,21 @@
         <a class="navbar-brand" href="{% url 'index' %}">Polling App!!</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="">{{ user.username }}</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'users:login' %}">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'users:register' %}">Register</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </div>
