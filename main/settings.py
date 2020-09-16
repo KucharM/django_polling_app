@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_mysql',
     'polls',
     'users',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,5 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'index' 
 LOGOUT_REDIRECT_URL = 'users:login'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
