@@ -10,6 +10,7 @@ django = "*"
 django-mysql = "*"
 mysql-connector = "*"
 mysqlclient = {path = "./mysqlclient-1.4.6-cp38-cp38-win32.whl"}
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.8"
